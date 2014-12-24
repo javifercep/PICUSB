@@ -1,0 +1,591 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:18f4550
+LIBS:arduino_uno_r3_compatible-cache
+LIBS:PICUSBLib
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title "PlacaUSB"
+Date "2 oct 2013"
+Rev "1.0"
+Comp "AESS Estudiants"
+Comment1 "Javier Fernández"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L FUSE F1
+U 1 1 521CEA4C
+P 3450 1650
+F 0 "F1" H 3550 1700 40  0000 C CNN
+F 1 "FUSE" H 3350 1600 40  0000 C CNN
+F 2 "~" H 3450 1650 60  0000 C CNN
+F 3 "~" H 3450 1650 60  0000 C CNN
+	1    3450 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR017
+U 1 1 521CEA52
+P 3850 2450
+F 0 "#PWR017" H 3850 2450 30  0001 C CNN
+F 1 "GND" H 3850 2380 30  0001 C CNN
+F 2 "" H 3850 2450 60  0000 C CNN
+F 3 "" H 3850 2450 60  0000 C CNN
+	1    3850 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR018
+U 1 1 521CEA58
+P 5050 2350
+F 0 "#PWR018" H 5050 2350 30  0001 C CNN
+F 1 "GND" H 5050 2280 30  0001 C CNN
+F 2 "" H 5050 2350 60  0000 C CNN
+F 3 "" H 5050 2350 60  0000 C CNN
+	1    5050 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C8
+U 1 1 521CEA5E
+P 2900 1850
+F 0 "C8" H 2900 1950 40  0000 L CNN
+F 1 "100n" H 2906 1765 40  0000 L CNN
+F 2 "~" H 2938 1700 30  0000 C CNN
+F 3 "~" H 2900 1850 60  0000 C CNN
+	1    2900 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR019
+U 1 1 521CEA64
+P 2900 2150
+F 0 "#PWR019" H 2900 2150 30  0001 C CNN
+F 1 "GND" H 2900 2080 30  0001 C CNN
+F 2 "" H 2900 2150 60  0000 C CNN
+F 3 "" H 2900 2150 60  0000 C CNN
+	1    2900 2150
+	1    0    0    -1  
+$EndComp
+Text Label 2750 1650 2    60   ~ 0
+Vusbpure
+Wire Wire Line
+	3800 1800 3900 1800
+Wire Wire Line
+	3800 1950 3900 1950
+Wire Wire Line
+	2900 2050 2900 2150
+Wire Wire Line
+	2750 1650 3200 1650
+Wire Wire Line
+	3900 1650 3700 1650
+Wire Wire Line
+	5050 1650 5050 2350
+Wire Wire Line
+	5000 2100 5050 2100
+Wire Wire Line
+	3850 2250 3850 2450
+Wire Wire Line
+	3900 2250 3850 2250
+$Comp
+L SWITCH_INV SW2
+U 1 1 521CEA75
+P 6550 1950
+F 0 "SW2" H 6350 2100 50  0000 C CNN
+F 1 "SWITCH_INV" H 6400 1800 50  0000 C CNN
+F 2 "~" H 6550 1950 60  0000 C CNN
+F 3 "~" H 6550 1950 60  0000 C CNN
+	1    6550 1950
+	-1   0    0    1   
+$EndComp
+Text Label 6050 1850 2    60   ~ 0
+Vusbserie
+Text Label 6050 2050 2    60   ~ 0
+Vusbpure
+Text Label 7050 1950 0    60   ~ 0
+Vusb
+Text Label 3800 1800 0    60   ~ 0
+D-
+Text Label 3800 1950 0    60   ~ 0
+D+
+Wire Wire Line
+	5000 2250 5050 2250
+Connection ~ 5050 2250
+Wire Wire Line
+	5000 1800 5050 1800
+Connection ~ 5050 2100
+Wire Wire Line
+	5000 1650 5050 1650
+Connection ~ 5050 1800
+NoConn ~ 3900 2100
+$Comp
+L FT232RL U2
+U 1 1 521CEAFC
+P 6100 4900
+F 0 "U2" H 6100 5800 60  0000 C CNN
+F 1 "FT232RL" H 6500 3900 60  0000 L CNN
+F 2 "" H 6100 4900 60  0000 C CNN
+F 3 "" H 6100 4900 60  0000 C CNN
+	1    6100 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 521CEB02
+P 6100 6300
+F 0 "#PWR020" H 6100 6300 30  0001 C CNN
+F 1 "GND" H 6100 6230 30  0001 C CNN
+F 2 "" H 6100 6300 60  0000 C CNN
+F 3 "" H 6100 6300 60  0000 C CNN
+	1    6100 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L FUSE F2
+U 1 1 521CEB08
+P 3900 4350
+F 0 "F2" H 4000 4400 40  0000 C CNN
+F 1 "FUSE" H 3800 4300 40  0000 C CNN
+F 2 "~" H 3900 4350 60  0000 C CNN
+F 3 "~" H 3900 4350 60  0000 C CNN
+	1    3900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C9
+U 1 1 521CEB0E
+P 4200 3900
+F 0 "C9" H 4200 4000 40  0000 L CNN
+F 1 "100n" H 4206 3815 40  0000 L CNN
+F 2 "~" H 4238 3750 30  0000 C CNN
+F 3 "~" H 4200 3900 60  0000 C CNN
+	1    4200 3900
+	-1   0    0    1   
+$EndComp
+Text Label 4250 4350 0    60   ~ 0
+Vusbserie
+$Comp
+L GND #PWR021
+U 1 1 521CEB15
+P 4050 3500
+F 0 "#PWR021" H 4050 3500 30  0001 C CNN
+F 1 "GND" H 4050 3430 30  0001 C CNN
+F 2 "" H 4050 3500 60  0000 C CNN
+F 3 "" H 4050 3500 60  0000 C CNN
+	1    4050 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C10
+U 1 1 521CEB21
+P 4900 5100
+F 0 "C10" H 4900 5200 40  0000 L CNN
+F 1 "100n" H 4906 5015 40  0000 L CNN
+F 2 "~" H 4938 4950 30  0000 C CNN
+F 3 "~" H 4900 5100 60  0000 C CNN
+	1    4900 5100
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR022
+U 1 1 521CEB2D
+P 4900 5400
+F 0 "#PWR022" H 4900 5400 30  0001 C CNN
+F 1 "GND" H 4900 5330 30  0001 C CNN
+F 2 "" H 4900 5400 60  0000 C CNN
+F 3 "" H 4900 5400 60  0000 C CNN
+	1    4900 5400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5150 5100
+NoConn ~ 5150 5200
+$Comp
+L C C11
+U 1 1 521CEB35
+P 5100 5600
+F 0 "C11" H 5100 5700 40  0000 L CNN
+F 1 "100n" H 5106 5515 40  0000 L CNN
+F 2 "~" H 5138 5450 30  0000 C CNN
+F 3 "~" H 5100 5600 60  0000 C CNN
+	1    5100 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR023
+U 1 1 521CEB3B
+P 5100 5900
+F 0 "#PWR023" H 5100 5900 30  0001 C CNN
+F 1 "GND" H 5100 5830 30  0001 C CNN
+F 2 "" H 5100 5900 60  0000 C CNN
+F 3 "" H 5100 5900 60  0000 C CNN
+	1    5100 5900
+	1    0    0    -1  
+$EndComp
+Connection ~ 5950 6200
+Wire Wire Line
+	5950 6100 5950 6200
+Connection ~ 6250 6200
+Wire Wire Line
+	6250 6200 6250 6100
+Connection ~ 6100 6200
+Wire Wire Line
+	6400 6200 6400 6100
+Wire Wire Line
+	6100 6100 6100 6300
+Wire Wire Line
+	5800 6200 6400 6200
+Wire Wire Line
+	5800 6100 5800 6200
+Wire Wire Line
+	4200 4100 4200 4350
+Wire Wire Line
+	3550 4500 5150 4500
+Wire Wire Line
+	5100 3900 5100 4250
+Wire Wire Line
+	5100 4150 5150 4150
+Wire Wire Line
+	5100 4250 5150 4250
+Connection ~ 5100 4150
+Wire Wire Line
+	4900 4900 5150 4900
+Wire Wire Line
+	4900 5300 4900 5400
+Wire Wire Line
+	5150 5400 5100 5400
+Wire Wire Line
+	5100 5800 5100 5900
+Wire Wire Line
+	3550 4650 5000 4650
+Wire Wire Line
+	5000 4650 5000 4600
+Wire Wire Line
+	5000 4600 5150 4600
+$Comp
+L GND #PWR024
+U 1 1 521CEB66
+P 3600 5050
+F 0 "#PWR024" H 3600 5050 30  0001 C CNN
+F 1 "GND" H 3600 4980 30  0001 C CNN
+F 2 "" H 3600 5050 60  0000 C CNN
+F 3 "" H 3600 5050 60  0000 C CNN
+	1    3600 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR025
+U 1 1 521CEB6C
+P 2450 5100
+F 0 "#PWR025" H 2450 5100 30  0001 C CNN
+F 1 "GND" H 2450 5030 30  0001 C CNN
+F 2 "" H 2450 5100 60  0000 C CNN
+F 3 "" H 2450 5100 60  0000 C CNN
+	1    2450 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4350 2450 5100
+Connection ~ 2450 4500
+Connection ~ 2450 4800
+Connection ~ 2450 4950
+NoConn ~ 3550 4800
+$Comp
+L R R7
+U 1 1 521CEBBF
+P 7350 4000
+F 0 "R7" V 7430 4000 40  0000 C CNN
+F 1 "1k" V 7357 4001 40  0000 C CNN
+F 2 "~" V 7280 4000 30  0000 C CNN
+F 3 "~" H 7350 4000 30  0000 C CNN
+	1    7350 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R8
+U 1 1 521CEBC5
+P 7350 4300
+F 0 "R8" V 7430 4300 40  0000 C CNN
+F 1 "1k" V 7357 4301 40  0000 C CNN
+F 2 "~" V 7280 4300 30  0000 C CNN
+F 3 "~" H 7350 4300 30  0000 C CNN
+	1    7350 4300
+	0    -1   -1   0   
+$EndComp
+Text Label 7700 4300 0    60   ~ 0
+TX
+Text Label 7700 4000 0    60   ~ 0
+Rx
+$Comp
+L LED D7
+U 1 1 521CEBCD
+P 7700 5350
+F 0 "D7" H 7700 5450 50  0000 C CNN
+F 1 "LED" H 7700 5250 50  0000 C CNN
+F 2 "~" H 7700 5350 60  0000 C CNN
+F 3 "~" H 7700 5350 60  0000 C CNN
+	1    7700 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D6
+U 1 1 521CEBD3
+P 7400 5350
+F 0 "D6" H 7400 5450 50  0000 C CNN
+F 1 "LED" H 7400 5250 50  0000 C CNN
+F 2 "~" H 7400 5350 60  0000 C CNN
+F 3 "~" H 7400 5350 60  0000 C CNN
+	1    7400 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R10
+U 1 1 521CEBD9
+P 7700 5900
+F 0 "R10" V 7780 5900 40  0000 C CNN
+F 1 "1k" V 7707 5901 40  0000 C CNN
+F 2 "~" V 7630 5900 30  0000 C CNN
+F 3 "~" H 7700 5900 30  0000 C CNN
+	1    7700 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R9
+U 1 1 521CEBE5
+P 7400 5900
+F 0 "R9" V 7480 5900 40  0000 C CNN
+F 1 "1k" V 7407 5901 40  0000 C CNN
+F 2 "~" V 7330 5900 30  0000 C CNN
+F 3 "~" H 7400 5900 30  0000 C CNN
+	1    7400 5900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7000 5200
+$Comp
+L CONN_6 P1
+U 1 1 521CEBEC
+P 8350 4650
+F 0 "P1" V 8300 4650 60  0000 C CNN
+F 1 "CONN_6" V 8400 4650 60  0000 C CNN
+F 2 "" H 8350 4650 60  0000 C CNN
+F 3 "" H 8350 4650 60  0000 C CNN
+	1    8350 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4200 7100 4200
+Wire Wire Line
+	7000 4300 7100 4300
+Wire Wire Line
+	7600 4000 7700 4000
+Wire Wire Line
+	7600 4300 7700 4300
+Wire Wire Line
+	7600 6250 7600 6150
+Wire Wire Line
+	7400 6150 7700 6150
+Wire Wire Line
+	7400 5650 7400 5550
+Wire Wire Line
+	7000 5000 7700 5000
+Wire Wire Line
+	7000 5100 7400 5100
+Wire Wire Line
+	7000 4600 7200 4600
+Wire Wire Line
+	7200 4600 7200 4400
+Wire Wire Line
+	7200 4400 8000 4400
+Wire Wire Line
+	7000 4400 7100 4400
+Wire Wire Line
+	7100 4400 7100 4500
+Wire Wire Line
+	7100 4500 8000 4500
+Wire Wire Line
+	7250 4900 7000 4900
+Wire Wire Line
+	7250 4600 7250 4900
+Wire Wire Line
+	7250 4600 8000 4600
+Wire Wire Line
+	7000 4700 8000 4700
+Wire Wire Line
+	7000 4800 8000 4800
+Wire Wire Line
+	7000 4500 7000 4550
+Wire Wire Line
+	7000 4550 7100 4550
+Wire Wire Line
+	7100 4550 7100 4850
+Wire Wire Line
+	7100 4850 7400 4850
+Wire Wire Line
+	7400 4850 7400 4900
+NoConn ~ 7000 5300
+NoConn ~ 7000 5400
+Wire Wire Line
+	3550 4950 3600 4950
+Wire Wire Line
+	3600 4950 3600 5050
+Wire Wire Line
+	3650 4350 3550 4350
+Wire Wire Line
+	4150 4350 4250 4350
+Connection ~ 4200 4350
+Wire Wire Line
+	4200 3700 4200 3450
+Wire Wire Line
+	4200 3450 4050 3450
+Wire Wire Line
+	4050 3450 4050 3500
+Connection ~ 7600 6150
+Wire Wire Line
+	7700 5650 7700 5550
+Wire Wire Line
+	7700 5000 7700 5150
+Wire Wire Line
+	7400 5100 7400 5150
+Wire Wire Line
+	7100 4200 7100 4000
+Wire Wire Line
+	7400 4900 8000 4900
+Connection ~ 2900 1650
+Text Notes 2800 3300 0    60   ~ 12
+USB-RS232
+Text Notes 2600 1250 0    60   ~ 12
+USB FS
+Text Notes 5550 1350 0    60   ~ 12
+USB Power Switch
+Wire Notes Line
+	2200 3100 2200 6500
+Wire Notes Line
+	2200 6500 8700 6500
+Wire Notes Line
+	8700 6500 8700 3100
+Wire Notes Line
+	8700 3100 2200 3100
+Wire Notes Line
+	2200 2600 2200 1100
+Wire Notes Line
+	2200 1100 5300 1100
+Wire Notes Line
+	5300 1100 5300 2600
+Wire Notes Line
+	5300 2600 2200 2600
+Wire Notes Line
+	5450 1100 5450 2600
+Wire Notes Line
+	5450 2600 7450 2600
+Wire Notes Line
+	7450 2600 7450 1100
+Wire Notes Line
+	7450 1100 5450 1100
+Wire Notes Line
+	7600 1100 7600 2600
+Wire Notes Line
+	7600 2600 8700 2600
+Wire Notes Line
+	8700 1100 7600 1100
+Text Notes 7650 1300 0    60   ~ 12
+Hierarchical pins
+Text HLabel 8250 1550 2    60   Output ~ 0
+VUSB
+Text HLabel 8250 1700 2    60   Input ~ 0
+RSRx
+Text HLabel 8250 1850 2    60   Output ~ 0
+RSTx
+Text HLabel 8250 2000 2    60   Output ~ 0
+USBDP
+Text HLabel 8250 2150 2    60   Output ~ 0
+USBDM
+Text Label 7850 1550 2    60   ~ 0
+Vusb
+Text Label 7850 1700 2    60   ~ 0
+Rx
+Text Label 7850 1850 2    60   ~ 0
+TX
+Text Label 7850 2000 2    60   ~ 0
+D+
+Text Label 7850 2150 2    60   ~ 0
+D-
+Wire Wire Line
+	7850 1550 8250 1550
+Wire Wire Line
+	7850 1700 8250 1700
+Wire Wire Line
+	7850 1850 8250 1850
+Wire Wire Line
+	7850 2000 8250 2000
+Wire Wire Line
+	7850 2150 8250 2150
+Wire Notes Line
+	8700 2600 8700 1100
+Text HLabel 8250 2300 2    60   Input ~ 0
+5V0
+Text Label 7850 2300 2    60   ~ 0
+5V
+Wire Wire Line
+	7850 2300 8250 2300
+Text Label 5100 3900 2    60   ~ 0
+5V
+Text Label 7600 6250 2    60   ~ 0
+5V
+$Comp
+L USBMINIB CON1
+U 1 1 522177A9
+P 3000 4650
+F 0 "CON1" H 2750 5100 60  0000 C CNN
+F 1 "USBMINIB" H 2950 4150 60  0000 C CNN
+F 2 "" H 3000 4650 60  0000 C CNN
+F 3 "" H 3000 4650 60  0000 C CNN
+	1    3000 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L USBMINIB CON2
+U 1 1 522177B8
+P 4450 1950
+F 0 "CON2" H 4200 2400 60  0000 C CNN
+F 1 "USBMINIB" H 4400 1450 60  0000 C CNN
+F 2 "" H 4450 1950 60  0000 C CNN
+F 3 "" H 4450 1950 60  0000 C CNN
+	1    4450 1950
+	1    0    0    -1  
+$EndComp
+Text Label 5050 4900 2    60   ~ 0
+5V
+$EndSCHEMATC

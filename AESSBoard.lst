@@ -1,0 +1,150 @@
+eeschema (2013-02-27 BZR 3976)-stable  >> Creation date: 30/08/2013 19:12:35
+#Cmp ( order = Reference )
+| C1         C           ; ~           
+| C2         15P         ; ~           
+| C3         15p         ; ~           
+| C4         100n        ; ~           
+| C5         100u        ; ~           
+| C6         100n        ; ~           
+| C7         100u        ; ~           
+| C8         100n        ; ~           
+| C9         100n        ; ~           
+| C10        100n        ; ~           
+| C11        100n        ; ~           
+| C12        100n        ; ~           
+| C13        100n        ; ~           
+| C14        100n        ; ~           
+| C15        100n        ; ~           
+| C16        100n        ; ~           
+| CON1       USBMINIB    ;             
+| CON2       USBMINIB    ;             
+| D1         DIODE       ; ~           
+| D2         DIODE       ; ~           
+| D3         LED         ; ~           
+| D4         DIODE       ; ~           
+| D5         LED         ; ~           
+| D6         LED         ; ~           
+| D7         LED         ; ~           
+| F1         FUSE        ; ~           
+| F2         FUSE        ; ~           
+| K1         CONN_3      ;             
+| K2         CONN_3      ;             
+| K3         CONN_3      ;             
+| K4         CONN_3      ;             
+| K5         CONN_3      ;             
+| K6         CONN_3      ;             
+| K7         CONN_3      ;             
+| K8         CONN_3      ;             
+| K9         CONN_3      ;             
+| K10        CONN_3      ;             
+| K11        CONN_3      ;             
+| K12        CONN_3      ;             
+| K13        CONN_3      ;             
+| P1         CONN_6      ;             
+| P2         CONN_6      ;             
+| P3         CONN_4      ;             
+| P4         CONN_4      ;             
+| P5         CONN_4      ;             
+| Q1         BC307       ;             
+| R1         7,5M        ; ~           
+| R2         33k         ; ~           
+| R3         2,4M        ; ~           
+| R4         7,5M        ; ~           
+| R5         2,4M        ; ~           
+| R6         1k          ; ~           
+| R7         1k          ; ~           
+| R8         1k          ; ~           
+| R9         1k          ; ~           
+| R10        1k          ; ~           
+| R11        1k          ; ~           
+| R12        56          ; ~           
+| R13        22k         ; ~           
+| R14        1k          ; ~           
+| R15        22k         ; ~           
+| R16        22k         ; ~           
+| SW1        DUAL_SWITCH_INV; ~           
+| SW2        SWITCH_INV  ; ~           
+| SW3        SW_PUSH     ; ~           
+| SW4        SW_PUSH     ; ~           
+| U1         ADP667AN    ;             
+| U2         FT232RL     ;             
+| U3         ARDUINO_UNO_R3_EX; ~           
+| U***1      PIC18F4550  ;             
+| X1         CRYSTAL     ; ~           
+#End Cmp
+
+#Componentes ( orden = Valor )
+| 15p          C3        ; ~           
+| C            C1        ; ~           
+| PIC18F4550   U***1     ;             
+| 100n         C4        ; ~           
+| 100n         C6        ; ~           
+| 100n         C8        ; ~           
+| 100n         C9        ; ~           
+| 100n         C10       ; ~           
+| 100n         C11       ; ~           
+| 100n         C12       ; ~           
+| 100n         C13       ; ~           
+| 100n         C14       ; ~           
+| 100n         C15       ; ~           
+| 100n         C16       ; ~           
+| 100u         C5        ; ~           
+| 100u         C7        ; ~           
+| 15P          C2        ; ~           
+| USBMINIB     CON1      ;             
+| USBMINIB     CON2      ;             
+| DIODE        D1        ; ~           
+| DIODE        D2        ; ~           
+| LED          D3        ; ~           
+| DIODE        D4        ; ~           
+| LED          D5        ; ~           
+| LED          D6        ; ~           
+| LED          D7        ; ~           
+| FUSE         F1        ; ~           
+| FUSE         F2        ; ~           
+| CONN_3       K1        ;             
+| CONN_3       K2        ;             
+| CONN_3       K3        ;             
+| CONN_3       K4        ;             
+| CONN_3       K5        ;             
+| CONN_3       K6        ;             
+| CONN_3       K7        ;             
+| CONN_3       K8        ;             
+| CONN_3       K9        ;             
+| CONN_3       K10       ;             
+| CONN_3       K11       ;             
+| CONN_3       K12       ;             
+| CONN_3       K13       ;             
+| CONN_6       P1        ;             
+| CONN_6       P2        ;             
+| CONN_4       P3        ;             
+| CONN_4       P4        ;             
+| CONN_4       P5        ;             
+| BC307        Q1        ;             
+| 56           R12       ; ~           
+| 1k           R6        ; ~           
+| 1k           R7        ; ~           
+| 1k           R8        ; ~           
+| 1k           R9        ; ~           
+| 1k           R10       ; ~           
+| 1k           R11       ; ~           
+| 1k           R14       ; ~           
+| 22k          R13       ; ~           
+| 22k          R15       ; ~           
+| 22k          R16       ; ~           
+| 33k          R2        ; ~           
+| 2,4M         R3        ; ~           
+| 2,4M         R5        ; ~           
+| 7,5M         R1        ; ~           
+| 7,5M         R4        ; ~           
+| DUAL_SWITCH_INV SW1       ; ~           
+| SWITCH_INV   SW2       ; ~           
+| SW_PUSH      SW3       ; ~           
+| SW_PUSH      SW4       ; ~           
+| ADP667AN     U1        ;             
+| FT232RL      U2        ;             
+| ARDUINO_UNO_R3_EX U3        ; ~           
+| CRYSTAL      X1        ; ~           
+#Fin Componentes
+
+#Fin de Lista
